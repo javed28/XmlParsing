@@ -15,6 +15,8 @@
 		59975F2F2466B0830037B3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59975F2D2466B0830037B3D0 /* LaunchScreen.storyboard */; };
 		59975F3A2466B0840037B3D0 /* XmlParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F392466B0840037B3D0 /* XmlParsingTests.swift */; };
 		59975F452466B0840037B3D0 /* XmlParsingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F442466B0840037B3D0 /* XmlParsingUITests.swift */; };
+		59975F532466B13B0037B3D0 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F522466B13B0037B3D0 /* HttpUtility.swift */; };
+		59975F552466B1540037B3D0 /* XMLParsingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F542466B1540037B3D0 /* XMLParsingUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		59975F402466B0840037B3D0 /* XmlParsingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XmlParsingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59975F442466B0840037B3D0 /* XmlParsingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlParsingUITests.swift; sourceTree = "<group>"; };
 		59975F462466B0840037B3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59975F522466B13B0037B3D0 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		59975F542466B1540037B3D0 /* XMLParsingUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParsingUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				59975F2B2466B0830037B3D0 /* Assets.xcassets */,
 				59975F2D2466B0830037B3D0 /* LaunchScreen.storyboard */,
 				59975F302466B0830037B3D0 /* Info.plist */,
+				59975F522466B13B0037B3D0 /* HttpUtility.swift */,
+				59975F542466B1540037B3D0 /* XMLParsingUtility.swift */,
 			);
 			path = XmlParsing;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59975F532466B13B0037B3D0 /* HttpUtility.swift in Sources */,
+				59975F552466B1540037B3D0 /* XMLParsingUtility.swift in Sources */,
 				59975F272466B0820037B3D0 /* ViewController.swift in Sources */,
 				59975F232466B0820037B3D0 /* AppDelegate.swift in Sources */,
 				59975F252466B0820037B3D0 /* SceneDelegate.swift in Sources */,
