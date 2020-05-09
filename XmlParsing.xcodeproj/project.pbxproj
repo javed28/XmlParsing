@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594E83A32466C28F0011ECC8 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E83A22466C28F0011ECC8 /* FeedTableViewCell.swift */; };
 		59975F232466B0820037B3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F222466B0820037B3D0 /* AppDelegate.swift */; };
 		59975F252466B0820037B3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F242466B0820037B3D0 /* SceneDelegate.swift */; };
-		59975F272466B0820037B3D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F262466B0820037B3D0 /* ViewController.swift */; };
+		59975F272466B0820037B3D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975F262466B0820037B3D0 /* FeedViewController.swift */; };
 		59975F2A2466B0820037B3D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59975F282466B0820037B3D0 /* Main.storyboard */; };
 		59975F2C2466B0830037B3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59975F2B2466B0830037B3D0 /* Assets.xcassets */; };
 		59975F2F2466B0830037B3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59975F2D2466B0830037B3D0 /* LaunchScreen.storyboard */; };
@@ -37,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		594E83A22466C28F0011ECC8 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		59975F1F2466B0820037B3D0 /* XmlParsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XmlParsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59975F222466B0820037B3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59975F242466B0820037B3D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		59975F262466B0820037B3D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59975F262466B0820037B3D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		59975F292466B0820037B3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59975F2B2466B0830037B3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59975F2E2466B0830037B3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,13 +107,14 @@
 			children = (
 				59975F222466B0820037B3D0 /* AppDelegate.swift */,
 				59975F242466B0820037B3D0 /* SceneDelegate.swift */,
-				59975F262466B0820037B3D0 /* ViewController.swift */,
+				59975F262466B0820037B3D0 /* FeedViewController.swift */,
 				59975F282466B0820037B3D0 /* Main.storyboard */,
 				59975F2B2466B0830037B3D0 /* Assets.xcassets */,
 				59975F2D2466B0830037B3D0 /* LaunchScreen.storyboard */,
 				59975F302466B0830037B3D0 /* Info.plist */,
 				59975F522466B13B0037B3D0 /* HttpUtility.swift */,
 				59975F542466B1540037B3D0 /* XMLParsingUtility.swift */,
+				594E83A22466C28F0011ECC8 /* FeedTableViewCell.swift */,
 			);
 			path = XmlParsing;
 			sourceTree = "<group>";
@@ -266,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59975F532466B13B0037B3D0 /* HttpUtility.swift in Sources */,
+				594E83A32466C28F0011ECC8 /* FeedTableViewCell.swift in Sources */,
 				59975F552466B1540037B3D0 /* XMLParsingUtility.swift in Sources */,
-				59975F272466B0820037B3D0 /* ViewController.swift in Sources */,
+				59975F272466B0820037B3D0 /* FeedViewController.swift in Sources */,
 				59975F232466B0820037B3D0 /* AppDelegate.swift in Sources */,
 				59975F252466B0820037B3D0 /* SceneDelegate.swift in Sources */,
 			);
