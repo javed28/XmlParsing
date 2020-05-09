@@ -8,18 +8,18 @@
 
 import UIKit
 
-class FeedTableViewCell: UITableViewCell {
+class PlantTableViewCell: UITableViewCell {
 
-    @IBOutlet var lblTitle : UILabel!
-    @IBOutlet var lblDesc : UILabel!
-    @IBOutlet var lblDate : UILabel!
+    @IBOutlet var lblCommon : UILabel!
+    @IBOutlet var lblBotanical : UILabel!
+    @IBOutlet var lblZone : UILabel!
     
-    var item : RSSItem!{
+    var plantItem : Plant!{
         didSet{
-            lblTitle.text = item.title
-            lblDesc.text = item.description
-            lblDesc.numberOfLines = 3
-            lblDate.text = item.pubDate
+            lblCommon.text = plantItem.Common
+            lblBotanical.text = plantItem.Botanical
+            lblBotanical.numberOfLines = 3
+            lblZone.text = plantItem.Zone
         }
         
     }

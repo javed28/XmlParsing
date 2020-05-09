@@ -8,18 +8,28 @@
 
 import Foundation
 
+struct Plant{
+    var Common : String
+    var Botanical : String
+    var Zone : String
+}
 
+struct CD{
+    var Title : String
+    var Artist : String
+    var Country : String
+}
 
-class FeedParser : NSObject,XMLParserDelegate{
-    private var rssItems : [RSSItem] = []
+class PlantParser : NSObject,XMLParserDelegate{
+    private var plantItems : [Plant] = []
     private var currentElement = ""
-    private var currentTitle : String = ""
-    private var currentDescription : String = ""
-    private var currentPubDate : String = ""
-    private var parserCompletionHandler : (([RSSItem])-> Void)?
+    private var currentCommon : String = ""
+    private var currentBotanical : String = ""
+    private var currentZone : String = ""
+    private var parserCompletionHandler : (([Plant])-> Void)?
     
     
-    func parserRssData(data : Data,completionHandler : (([RSSItem])-> Void)?){
+    func parserPlantData(data : Data,completionHandler : (([Plant])-> Void)?){
         self.parserCompletionHandler = completionHandler
         let parser = XMLParser(data: data)
         parser.delegate = self
@@ -29,30 +39,30 @@ class FeedParser : NSObject,XMLParserDelegate{
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
         currentElement = elementName
-        if currentElement == "item"{
-            currentTitle = ""
-            currentDescription = ""
-            currentPubDate = ""
+        if currentElement == "PLANT"{
+            currentCommon = ""
+            currentBotanical = ""
+            currentZone = ""
         }
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         switch currentElement {
-        case "title" : currentTitle += string
-        case "description" : currentDescription += string
-        case "pubDate" : currentPubDate += string
+        case "COMMON" : currentCommon += string
+        case "BOTANICAL" : currentBotanical += string
+        case "ZONE" : currentZone += string
         default: break
         }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "item"{
-            let rssItem = RSSItem(title: currentTitle, description: currentDescription, pubDate:  currentPubDate)
-            self.rssItems.append(rssItem)
+        if elementName == "PLANT"{
+            let plantItem = Plant(Common: currentCommon, Botanical: currentBotanical, Zone: currentZone)
+            self.plantItems.append(plantItem)
         }
     }
     func parserDidEndDocument(_ parser: XMLParser) {
-        self.parserCompletionHandler?(rssItems)
+        self.parserCompletionHandler?(plantItems)
     }
  
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
@@ -60,3 +70,54 @@ class FeedParser : NSObject,XMLParserDelegate{
     }
 }
 
+
+
+class CDParser : NSObject,XMLParserDelegate{
+    private var cdItems : [CD] = []
+    private var currentElement = ""
+    private var currentTitle : String = ""
+    private var currentArtist : String = ""
+    private var currentCountry : String = ""
+    private var parserCompletionHandler : (([CD])-> Void)?
+    
+    
+    func parserCDData(data : Data,completionHandler : (([CD])-> Void)?){
+        self.parserCompletionHandler = completionHandler
+        let parser = XMLParser(data: data)
+        parser.delegate = self
+        parser.parse()
+    }
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        
+        currentElement = elementName
+        if currentElement == "CD"{
+            currentTitle = ""
+            currentArtist = ""
+            currentCountry = ""
+        }
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        switch currentElement {
+        case "TITLE" : currentTitle += string
+        case "ARTIST" : currentArtist += string
+        case "COUNTRY" : currentCountry += string
+        default: break
+        }
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if elementName == "CD"{
+            let cdItem = CD(Title: currentTitle, Artist: currentArtist, Country: currentCountry)
+            self.cdItems.append(cdItem)
+        }
+    }
+    func parserDidEndDocument(_ parser: XMLParser) {
+        self.parserCompletionHandler?(cdItems)
+    }
+ 
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print(parseError.localizedDescription)
+    }
+}
